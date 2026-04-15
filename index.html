@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haps Studio - Run and Rise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Press+Start+2P&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom, #0a1f3d, #000000);
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .logo-font {
+            font-family: 'Press Start 2P', sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #00b8d4 100%);
+        }
+        
+        .glow-cyan {
+            text-shadow: 0 0 30px #00f5ff, 0 0 60px #00f5ff;
+        }
+
+        .btn-animated {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .btn-animated:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px -10px rgba(0, 245, 255, 0.5);
+        }
+
+        .btn-animated::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 40%;
+            height: 400%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255,255,255,0.4),
+                transparent
+            );
+            transform: skewX(-25deg);
+            animation: shine 4s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-150%) skewX(-25deg); }
+            20% { transform: translateX(300%) skewX(-25deg); }
+            100% { transform: translateX(300%) skewX(-25deg); }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            
+    
+            <div class="space-y-8">
+                <div class="inline-block bg-white/10 backdrop-blur-md px-6 py-3 rounded-3xl text-sm font-medium border border-white/30">
+                    CREATIVE STUDIO + LAB
+                </div>
+                
+                <h1 class="text-7xl md:text-8xl font-bold leading-none logo-font tracking-wider glow-cyan">
+                    Haps<br>Studio
+                </h1>
+                
+                <p class="text-3xl text-cyan-200">Our official website for the map</p>
+                <p class="text-4xl font-bold">LET'S START!</p>
+                
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#projects" 
+                       class="btn-animated inline-block bg-cyan-400 hover:bg-cyan-300 text-black font-bold text-xl px-10 py-5 rounded-3xl flex items-center gap-3">
+                        <span>LOOK AT OUR PROJECTS</span>
+                        <i class="fa-solid fa-arrow-down animate-bounce"></i>
+                    </a>
+
+
+                    <a href="https://discord.gg/x9fptb9GD3" target="_blank"
+                       class="btn-animated inline-block bg-indigo-500 hover:bg-indigo-400 text-white font-bold text-xl px-10 py-5 rounded-3xl flex items-center gap-3">
+                        <span>JOIN OUR DISCORD</span>
+                        <i class="fa-brands fa-discord text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="flex justify-center md:justify-end">
+                <div class="bg-gradient-to-br from-blue-600 to-cyan-400 p-6 rounded-3xl shadow-2xl">
+                    <img src="https://i.ibb.co/GvKPNrtT/Screenshot-2026-04-14-192151.png" 
+                         alt="Haps Studio"
+                         class="rounded-2xl w-full max-w-md shadow-xl border-4 border-white/80">
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
+    </div>
+
+
+    <div class="py-24" id="projects" style="background: rgba(0, 0, 0, 0.7);">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-6xl font-bold text-center mb-16 glow-cyan">What plans do we have?</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-black/60 backdrop-blur-md border border-cyan-400/30 rounded-3xl p-8">
+                    <h3 class="text-2xl font-bold mb-4">Our Current Map</h3>
+                    <p class="text-cyan-300 text-lg leading-relaxed">
+                        For now on the schedule we only have one map called 
+                        <span class="font-bold text-white">Run & Rise</span>. 
+                        It will be a really nice map, believe me!!
+                    </p>
+                </div>
+
+                <div class="bg-black/60 backdrop-blur-md border border-cyan-400/30 rounded-3xl p-8">
+                    <h3 class="text-2xl font-bold mb-4">Discord Server</h3>
+                    <p class="text-cyan-300 text-lg leading-relaxed">
+                        Beyond the projects we are continuing, we have a Discord server 
+                        where we show you the mechanics in advance. Join now!!
+                    </p>
+                </div>
+
+                <div class="bg-black/60 backdrop-blur-md border border-cyan-400/30 rounded-3xl p-8">
+                    <h3 class="text-2xl font-bold mb-4">Social Media</h3>
+                    <p class="text-cyan-300 text-lg leading-relaxed">
+                        We have two social media accounts where we explain how the game works 
+                        and more. You can visit them by scrolling down!!!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <h2 class="text-6xl font-bold leading-none mb-8">
+                        We introduce you to <span class="text-cyan-400">Run & Rise</span>
+                    </h2>
+                    
+                    <p class="text-xl text-gray-300 leading-relaxed">
+                        Run and Rise is a fun obby on Roblox where you have to run, jump, 
+                        and dodge deadly obstacles to reach the end. The game takes you through 
+                        very different stages: from platforms of scorching lava, to chaotic rooms 
+                        full of red lasers and deadly green slime, to unstable city-style bridges 
+                        and a dark industrial area with giant fans, and more!
+                    </p>
+                    
+                    <div class="mt-10">
+                        <a href="https://www.roblox.com/share/g/744670160" target="_blank"
+                           class="inline-flex items-center gap-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold text-2xl px-12 py-6 rounded-3xl hover:scale-105">
+                            <span>JOIN OUR ROBLOX GROUP</span>
+                            <i class="fa-solid fa-arrow-right text-3xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img src="https://i.ibb.co/8DFL37Np/synthid-removed-Gemini-Generated-Image-dwt788dwt788dwt7.png" 
+                         alt="Run and Rise"
+                         class="rounded-3xl shadow-2xl border-4 border-cyan-400 w-full">
+                    <div class="absolute -top-6 -right-6 bg-gradient-to-br from-yellow-400 to-orange-500 text-black font-bold text-4xl px-8 py-4 rounded-3xl rotate-12 shadow-xl border-4 border-white">
+                        RUN AND RISE
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="py-20 bg-gradient-to-b from-black to-[#0a1f3d]">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-12">Follow Us on Social Media</h2>
+            
+            <div class="flex flex-col sm:flex-row gap-8 justify-center">
+                <a href="https://www.youtube.com/@HapsStudio" target="_blank" 
+                   class="flex-1 bg-black/70 hover:bg-red-600/20 border border-red-500 rounded-3xl p-8 text-3xl font-bold flex items-center justify-center gap-4">
+                    <i class="fa-brands fa-youtube text-5xl"></i>
+                    YouTube
+                </a>
+
+                <a href="https://www.instagram.com/haps_studio1/" target="_blank" 
+                   class="flex-1 bg-black/70 hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500 border border-pink-500 rounded-3xl p-8 text-3xl font-bold flex items-center justify-center gap-4">
+                    <i class="fa-brands fa-instagram text-5xl"></i>
+                    Instagram
+                </a>
+            </div>
+            
+            <p class="mt-10 text-cyan-400 text-sm">Click the buttons above to go straight to our channels</p>
+        </div>
+    </div>
+
+    <footer class="py-12 text-center text-sm opacity-60 border-t border-cyan-400/20">
+        © 2026 Haps Studio • Run and Rise • Made with passion for Roblox
+    </footer>
+
+</body>
+</html>
